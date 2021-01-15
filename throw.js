@@ -3,8 +3,8 @@ AFRAME.registerComponent("bowling-balls", {
     this.throwBall();
   },
   throwBall: function () {
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "z") {
+    window.addEventListener("click", (e) => {
+      //if (e.key === "z") {
         var  ball = document.createElement("a-entity");
 
         ball.setAttribute("gltf-model", "./models/bowling_ball/scene.gltf");
@@ -42,7 +42,7 @@ AFRAME.registerComponent("bowling-balls", {
         ball.addEventListener("collide", this.removeBall);
 
         scene.appendChild(ball);
-      }
+      //}
     });
   },
   removeBall: function (e) {
